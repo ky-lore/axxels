@@ -241,6 +241,9 @@ section{position:relative}
 .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px var(--red-glow);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 3px var(--red-glow)}50%{box-shadow:0 0 0 8px transparent}}
 @media(max-width:980px){.eyebrow{margin-inline:auto}}
+.hero-brand{margin-bottom:20px}
+.hero-brand img{height:62px;width:auto}
+@media(max-width:980px){.hero-brand{display:flex;justify-content:center}}
 
 .hero h1{font-size:clamp(2.9rem,7.4vw,5.6rem);margin-bottom:.36em}
 .hero h1 .l1{display:block}
@@ -742,7 +745,10 @@ section{position:relative}
   <div class="glow hero-glow-2"></div>
   <div class="wrap hero-inner">
     <div class="hero-copy">
-      <span class="eyebrow reveal"><span class="dot"></span> New Construction · Commercial · Industrial</span>
+      <div class="hero-brand reveal">
+        <img src="logo.png" alt="Axxel's Plumbing Corp — New Construction, Commercial &amp; Industrial"
+             onerror="this.parentElement.outerHTML='&lt;span class=\'eyebrow\'&gt;&lt;span class=\'dot\'&gt;&lt;/span&gt; New Construction · Commercial · Industrial&lt;/span&gt;'">
+      </div>
       <h1 class="anton reveal" data-d="1">
         <span class="l1 chrome">Plumbing Built</span>
         <span class="l2 chrome">To Spec.</span>
