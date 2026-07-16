@@ -454,8 +454,8 @@ section{position:relative}
 .fprop span{color:var(--muted);font-size:.9rem;line-height:1.5;display:block}
 
 /* ============================ SHOWCASE / GALLERY ============================ */
-.gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:190px;gap:14px}
-@media(max-width:900px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:215px;gap:14px}
+@media(max-width:900px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:165px}}
 .gtile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line-2);
   background:linear-gradient(160deg,#12294a,#081426);display:flex;align-items:flex-end;padding:18px;
   transition:.4s var(--ease)}
@@ -467,8 +467,30 @@ section{position:relative}
 .gtile .gcat{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;color:var(--red)}
 .gtile .gtitle{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:1.12rem;color:var(--ink)}
 .gtile .gph{position:absolute;top:14px;right:16px;z-index:2;font-size:.62rem;letter-spacing:.1em;color:var(--muted-2);text-transform:uppercase;border:1px solid var(--line);border-radius:100px;padding:.25em .6em}
-.g-wide{grid-column:span 3}.g-tall{grid-row:span 2}.g-med{grid-column:span 2}
-@media(max-width:900px){.g-wide,.g-med{grid-column:span 2}.g-tall{grid-row:span 1}}
+.g-2x2{grid-column:span 2;grid-row:span 2}.g-2w{grid-column:span 2}
+@media(max-width:900px){.g-2x2{grid-column:span 2;grid-row:span 2}.g-2w{grid-column:span 2}}
+
+/* ============================ LIGHT THEME SECTIONS ============================ */
+.theme-light{background:linear-gradient(180deg,#eff3f8,#e2e9f1);color:#0e2340}
+.theme-light .kicker{color:var(--red)}
+.theme-light .kicker::before{background:var(--red)}
+.theme-light .sec-head p,.theme-light > .wrap > p{color:#53637a}
+.theme-light .chrome{background:none;-webkit-text-fill-color:#0c1f38;color:#0c1f38;filter:none}
+.theme-light h2,.theme-light h3,.theme-light h4{color:#0c1f38}
+/* process cards on light */
+.theme-light .proc{background:#fff;border-color:#dde4ec;box-shadow:0 16px 34px -22px rgba(12,31,56,.35)}
+.theme-light .proc:hover{border-color:#c6d1de}
+.theme-light .proc .pn{background:linear-gradient(180deg,#eef2f7,#dfe6ee);border-color:#d2dbe5;color:#0c1f38}
+.theme-light .proc:hover .pn{background:linear-gradient(180deg,var(--red),var(--red-2));color:#fff}
+.theme-light .proc h4{color:#0c1f38}
+.theme-light .proc p{color:#53637a}
+.theme-light .proc .line{background:#cdd7e2}
+/* testimonial cards on light */
+.theme-light .testi{background:#fff;border-color:#dde4ec;box-shadow:0 16px 34px -22px rgba(12,31,56,.35)}
+.theme-light .testi p{color:#22364d}
+.theme-light .testi .who b{color:#0c1f38}
+.theme-light .testi .who span{color:#64748b}
+.theme-light .testi .av{background:linear-gradient(180deg,#eef2f7,#dfe6ee);border-color:#d2dbe5;color:#3a4a5e}
 
 /* ============================ TESTIMONIALS ============================ */
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -786,6 +808,25 @@ section{position:relative}
   </div>
 </div>
 
+<!-- ============================ SHOWCASE / GALLERY (BENTO) ============================ -->
+<section class="sec" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Recent Work</span>
+      <h2><span class="chrome">Built By Axxel's.</span><br>Signed Off By The City.</h2>
+      <p>From industrial process piping to commercial build-outs and mechanical repipes — a look at the work our licensed crews put their name on.</p>
+    </div>
+    <div class="gallery">
+      <div class="gtile g-2x2 reveal"><img class="gimg" src="img/work-rooftop.jpg" alt="Axxel's plumber servicing rooftop process piping"><div class="gmeta"><div class="gcat">Industrial</div><div class="gtitle">Rooftop Process Piping</div></div></div>
+      <div class="gtile g-2w reveal" data-d="1"><img class="gimg" src="img/work-sinks.jpg" alt="Commercial restroom plumbing build-out"><div class="gmeta"><div class="gcat">Commercial</div><div class="gtitle">Restroom Build-Out</div></div></div>
+      <div class="gtile reveal" data-d="2"><img class="gimg" src="img/work-boiler.jpg" alt="Mechanical room with copper repipe and water heater"><div class="gmeta"><div class="gcat">Mechanical</div><div class="gtitle">Boiler &amp; Repipe</div></div></div>
+      <div class="gtile reveal" data-d="3"><img class="gimg" src="img/plumber.jpg" alt="Axxel's plumber servicing fixtures and drain lines"><div class="gmeta"><div class="gcat">Service</div><div class="gtitle">Fixture &amp; Drain Work</div></div></div>
+      <div class="gtile g-2w reveal"><img class="gimg" src="img/work-vansite.jpg" alt="Axxel's van on a commercial job site"><div class="gmeta"><div class="gcat">On-Site</div><div class="gtitle">Commercial Service Call</div></div></div>
+      <div class="gtile g-2w reveal" data-d="1"><img class="gimg" src="img/team.jpg" alt="The Axxel's Plumbing Corp crew"><div class="gmeta"><div class="gcat">Our Crew</div><div class="gtitle">Licensed Team On Every Job</div></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================ STATS ============================ -->
 <section class="stats">
   <div class="wrap stats-grid">
@@ -894,7 +935,7 @@ section{position:relative}
 </section>
 
 <!-- ============================ PROCESS ============================ -->
-<section class="sec" id="process">
+<section class="sec theme-light" id="process">
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="kicker">How We Work</span>
@@ -966,24 +1007,6 @@ section{position:relative}
   </div>
 </section>
 
-<!-- ============================ SHOWCASE / GALLERY ============================ -->
-<section class="sec" id="work">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="kicker">Recent Work</span>
-      <h2><span class="chrome">Built By Axxel's.</span><br>Signed Off By The City.</h2>
-      <p>From industrial process piping to commercial build-outs and mechanical repipes — a look at the work our licensed crews put their name on.</p>
-    </div>
-    <div class="gallery">
-      <div class="gtile g-wide g-tall reveal"><img class="gimg" src="img/work-rooftop.jpg" alt="Axxel's plumber servicing rooftop process piping"><div class="gmeta"><div class="gcat">Industrial</div><div class="gtitle">Rooftop Process Piping</div></div></div>
-      <div class="gtile g-med reveal" data-d="1"><img class="gimg" src="img/work-sinks.jpg" alt="Commercial restroom plumbing build-out"><div class="gmeta"><div class="gcat">Commercial</div><div class="gtitle">Restroom Build-Out</div></div></div>
-      <div class="gtile reveal" data-d="2"><img class="gimg" src="img/work-boiler.jpg" alt="Mechanical room with copper repipe and water heater"><div class="gmeta"><div class="gcat">Mechanical</div><div class="gtitle">Boiler &amp; Repipe</div></div></div>
-      <div class="gtile reveal" data-d="3"><img class="gimg" src="img/plumber.jpg" alt="Axxel's plumber servicing fixtures and drain lines"><div class="gmeta"><div class="gcat">Service</div><div class="gtitle">Fixture &amp; Drain Work</div></div></div>
-      <div class="gtile g-med reveal"><img class="gimg" src="img/work-vansite.jpg" alt="Axxel's van on a commercial job site"><div class="gmeta"><div class="gcat">On-Site</div><div class="gtitle">Commercial Service Call</div></div></div>
-      <div class="gtile g-wide reveal" data-d="1"><img class="gimg" src="img/team.jpg" alt="The Axxel's Plumbing Corp crew"><div class="gmeta"><div class="gcat">Our Crew</div><div class="gtitle">Licensed Team On Every Job</div></div></div>
-    </div>
-  </div>
-</section>
 
 <!-- ============================ CTA BAND ============================ -->
 <section class="ctaband">
@@ -1002,7 +1025,7 @@ section{position:relative}
 </section>
 
 <!-- ============================ TESTIMONIALS ============================ -->
-<section class="sec">
+<section class="sec theme-light">
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="kicker">Word On The Job Site</span>
