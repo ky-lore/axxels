@@ -156,3 +156,26 @@
   }
 
 })();
+
+/* ---- cookie notice ---- */
+(function(){
+  "use strict";
+  if(localStorage.getItem('axxels-cookie-ack')) return;
+
+  var bar = document.createElement('div');
+  bar.className = 'cookie-notice';
+  bar.setAttribute('role', 'dialog');
+  bar.setAttribute('aria-label', 'Cookie notice');
+  bar.innerHTML =
+    '<p>We use a Google Maps embed on this site and a contact form to collect the details you submit — we don\'t sell your information. See our <a href="privacy.html">Privacy Policy</a> for details.</p>' +
+    '<div class="cookie-notice-actions"><button type="button" class="btn btn-red" data-cookie-ok>Got It</button></div>';
+  document.body.appendChild(bar);
+
+  requestAnimationFrame(function(){ bar.classList.add('show'); });
+
+  bar.querySelector('[data-cookie-ok]').addEventListener('click', function(){
+    localStorage.setItem('axxels-cookie-ack', '1');
+    bar.classList.remove('show');
+    setTimeout(function(){ bar.remove(); }, 500);
+  });
+})();
